@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI DJ Retro Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <section class="stereo" aria-label="Ретро AI DJ панель">
+        <header class="stereo-head">
+          <p class="brand">AIWA // AI DJ SYSTEM</p>
+          <p class="model">NSX-AI99E</p>
+        </header>
+
+        <section class="top-panel">
+          <div class="display" aria-live="polite">
+            <p class="display-line display-small">PROGRAM 03 :: AI AUTO MIX</p>
+            <p id="trackLine" class="display-line display-track">LOADING TRACK...</p>
+            <div class="equalizer" id="equalizer" aria-hidden="true">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+
+          <div class="volume-cluster">
+            <p class="cluster-label">MASTER VOLUME</p>
+            <button id="powerButton" class="power-button" type="button" aria-pressed="true">
+              POWER
+            </button>
+            <div class="volume-knob" aria-hidden="true">
+              <div class="knob-core"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="keys-row" aria-label="Режими ефектів">
+          <button type="button">DISCO</button>
+          <button type="button">HALL</button>
+          <button type="button">VOCAL</button>
+          <button type="button">BASS+</button>
+          <button type="button">ECHO</button>
+          <button type="button">REVERB</button>
+        </section>
+
+        <section class="transport-row" aria-label="Керування програванням">
+          <button type="button">◀◀</button>
+          <button type="button">▶</button>
+          <button type="button">▮▮</button>
+          <button type="button">▶▶</button>
+          <button type="button">LOOP</button>
+        </section>
+
+        <section class="deck-row">
+          <article class="ai-panel">
+            <p class="ai-title">AI DJ CONTROL</p>
+            <label class="field">
+              <span>PROMPT</span>
+              <input id="promptInput" type="text" value="Funky house + vinyl crackle + 124 BPM" />
+            </label>
+            <label class="field">
+              <span>ENERGY</span>
+              <input id="energyInput" type="range" min="1" max="10" value="7" />
+            </label>
+            <button id="generateButton" class="generate-button" type="button">
+              GENERATE SET
+            </button>
+          </article>
+        </section>
+
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
